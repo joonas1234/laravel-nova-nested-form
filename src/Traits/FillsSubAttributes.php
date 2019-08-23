@@ -290,11 +290,11 @@ trait FillsSubAttributes
     {
 
         if (count($this->touched) > 0 || $this->shouldRemoveAll) {
-
+            $keyName = $model->{$this->viaRelationship}()->getRelated()->getKeyName();
             if ($this->shouldRemoveAll) {
-                $ids = $model->{$this->viaRelationship}()->pluck('id');
+                $ids = $model->{$this->viaRelationship}()->pluck($keyName);
             } else {
-                $ids = $model->{$this->viaRelationship}()->whereNotIn('id', $this->touched)->pluck('id');
+                $ids = $model->{$this->viaRelationship}()->whereNotIn($keyName, $this->touched)->pluck($keyName);
             }
 
             $request = CustomDeleteResourceRequest::createFrom($this->request->replace(['resources' => $ids]));
