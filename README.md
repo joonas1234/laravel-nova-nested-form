@@ -6,9 +6,15 @@
 [![Monthly Downloads](https://poser.pugx.org/joonas1234/nova-nested-form/d/monthly)](https://packagist.org/packages/joonas1234/nova-nested-form)
 [![Daily Downloads](https://poser.pugx.org/joonas1234/nova-nested-form/d/daily)](https://packagist.org/packages/joonas1234/nova-nested-form)
 
+# HOX!!
+
+This package is a clone from https://github.com/yassipad/laravel-nova-nested-form.
+All the  credit goes to yassipad. I only applied this pull request to fix bug in newer Nova: https://github.com/yassipad/laravel-nova-nested-form/pull/68
+
 # Nova Nested Form
 
 This package allows you to include your nested relationships' forms into a parent form.
+
 
 # Release note for 2.0.5
 
